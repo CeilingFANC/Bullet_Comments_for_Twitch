@@ -1,7 +1,10 @@
 .App {
   text-align: center;
+  
 }
-
+body {
+  background-color: black;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -33,31 +36,32 @@
 }
 
 
+
+
+
 .video-container {
   position: relative;
   width: 800px;
 }
-.comment-layer {
-  top:0;
-  left:0;
-  z-index: 1000;
-  background-color: bisque;
-}
+
 #player1 {
   position: absolute;
-  z-index: 1;
+  z-index: 1 !important;
 }
-#lalala {
+.comment-layer {
   width: 800px;
   height: 600px;
-  position: contents;
+  position: relative;
+  pointer-events:none;  
+  overflow: hidden;
   top:0;
   left:0;
-  z-index: 999;
+  z-index: 9999;
 }
-.bullet {
-  position:absolute;
-  right:0;
-  color:yellow;
-  z-index: 1000;
+
+
+iframe {
+  position: relative;
+  z-index: -1 !important;
+
 }
